@@ -4,26 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TV Series</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="main.js" defer></script>
 </head>
 <body>
-    <header class="header">
-        <h1>TV Series</h1>
-    </header>
-    <div class="table-container">
-        <table class="table">
-            <thead class="thead-light">
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Channel</th>
-                    <th scope="col">Seasons</th>
-                </tr>
-            </thead>
-            <tbody id="series-table-body">
-            </tbody>
-        </table>
+    <div class="container">
+        <h1 class="text-center mt-4">TV Series</h1>
+        <div class="row">
+            <div class="col-md-8">
+                <table id="series" class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Canal</th>
+                            <th>Temporadas</th>
+                        </tr>
+                    </thead>
+                    <tbody id="series">
+                        
+                    </tbody>
+                </table>
+                <p id="promedio"></p>
+            </div>
+            <div class="col-md-4">
+                <div id="serie-detail" class="card" style="display: none;">
+                    <img id="serie-image" class="card-img-top" src="" alt="Serie Image">
+                    <div class="card-body">
+                        <p id="serie-description" class="card-text"></p>
+                        <a id="serie-link" href="#" target="_blank" class="btn btn-primary">Go to page</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <script src="main.js" defer></script>
 </body>
 </html>

@@ -15,6 +15,13 @@ function renderSeriesInTable(series){
     
 }
 
+function mostrarPromedioTemporadas(series) {
+    var promedio = getTemporadasProm(series);
+    var Element = document.createElement("tr");
+    Element.innerHTML = "<td colspan='3'>Promedio de temporadas: </td><td>".concat(promedio, "</td>");
+    seriesTabla.appendChild(Element);
+}
+
 function getTemporadasProm(series) {
     var totalTemporadas =0;
     var nSeries =0;
